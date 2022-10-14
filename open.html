@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <body>
+</h2><marquee scroll amount="5"><h2>dear anni wait for ur link</h2></marquee>
+<h3>Your Link: </h3>
+<div class="container">
+<h1 class="timer" id="timer"></h1>
+</div>
+<a href="html.html"><button disabled class="btn" id="btn">WAIT</button></a>
+    </body>
+    <style>
+        body{
+    background-color: black;
+    color: white;
+}
+h3{
+text-align: center; 
+padding-top: 0.1px; 
+letter-spacing: 1px; 
+font-size: 25px;
+}
+.container{
+    top: 50%;
+    height: 300px;
+    width: 300px;
+    margin-top: -30px; 
+    position: absolute; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    border-radius: 50%;
+    border: 2px solid #1995ad;
+    }
+    .container #timer{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        }
+        #btn{
+        position: absolute;
+        top: 80%;
+        left: 47%;
+        transform: translate (-50%, -50%); padding: 12px 10px;
+        border: none;
+        background-color: #cf3721;
+        cursor: no-drop;
+        border-radius: 10px;
+        width: 100px;
+    }
+
+
+    </style>
+<script>
+var time=15
+var x = setInterval(function(){
+document.getElementById("timer").innerHTML=" "+time+" seconds";
+time = time-1
+
+if(time < 0){
+      clearInterval(x);
+document.getElementById("btn").innerHTML = "wait";
+document.getElementById("btn").style.backgroundColor="#1995ad";
+document.getElementById("btn").style.cursor="pointer"; 
+document.getElementById("btn").style.opacity="1";
+} 
+},1000);
+</script>
+</html>
